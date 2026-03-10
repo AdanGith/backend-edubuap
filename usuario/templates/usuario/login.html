@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - EDUBUAP</title>
+    <link rel="stylesheet" href="{% static 'usuario/css/login.css' %}">
+</head>
+<body>
+    
+    <div class="left-side">
+        <div class="login-box">
+            <img src="{% static 'usuario/img/logoedubua.png' %}" class="logoedu" alt="Logo EDUBUAP">
+            
+            <h1>BIENVENIDO</h1>
+            <h2>Favor de ingresar sus datos</h2>
+            
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Entrar</button> 
+                <button type="button" class="btn-registro">Registrarse</button>
+                <br></br>
+                
+            </form>
+        </div>
+    </div>
+
+    <div class="right-side">
+        <img src="{% static 'usuario/img/pruebaa.jpeg' %}" class="mi-imagen-flotante" alt="Imagen Prueba">
+    </div>
+
+</body>
+</html>

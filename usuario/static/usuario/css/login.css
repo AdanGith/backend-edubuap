@@ -1,0 +1,115 @@
+/* usuario/static/usuario/css/login.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Evita que aparezca una barra de scroll horizontal */
+}
+
+body {
+    min-height: 100vh;
+    background-color: white; /* Mantiene tu fondo blanco izquierdo */
+    
+    /* Activamos Flexbox para centrar y partir la pantalla en dos */
+    display: flex;
+    flex-direction: row; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* EL TRUCO MÁGICO: Ahora usamos dos cajas, una izquierda y una derecha */
+.left-side {
+    width: 50%;              /* Crea un "muro" que obliga a la caja a quedarse en la mitad izquierda */
+    display: flex;
+    align-items: center;     /* Centra de arriba hacia abajo */
+    justify-content: center; /* Centra de izquierda a derecha... */
+    padding: 20px;
+}
+
+.right-side {
+    width: 50%;
+}
+
+.right-side img.mi-imagen-flotante {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.logoedu {
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin: 0 auto 40px auto; 
+
+}
+
+h1 { margin-bottom: 5px; color: #000; }
+h2 { margin-bottom: 25px; font-weight: normal; font-size: 18px; color: #333; }
+
+/* DISEÑO PARA LAS ETIQUETAS (Correo y Password) */
+.login-box label {
+    display: block;        /* Para que el texto quede arriba del cuadro */
+    font-weight: bold;     /* Letra negrita */
+    margin-bottom: 5px;    /* Separación entre el texto y el cuadro */
+    color: #333;           /* Color gris oscuro */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* DISEÑO PARA LOS CUADROS DE TEXTO (Inputs) */
+.login-box input {
+    width: 100%;           /* Que ocupen todo el ancho de la caja blanca */
+    padding: 10px;         /* Espacio interno para que no se vean apretados */
+    margin-bottom: 20px;   /* Separación con el siguiente elemento */
+    border: 1px solid #ccc;/* Borde gris clarito */
+    border-radius: 5px;    /* Bordes ligeramente redondeados */
+    box-sizing: border-box;/* Evita que se salgan de la caja */
+    font-size: 16px;       /* Letra más grande al escribir */
+}
+
+/* Cuando le das clic al cuadro de texto (Efecto de enfoque) */
+.login-box input:focus {
+    border-color: #003b5c; /* Borde azul BUAP al seleccionarlo */
+    outline: none;         /* Quita el borde negro feo que pone Chrome */
+}
+
+/* =========================================
+   DISEÑO PARA EL BOTÓN DE "ENTRAR"
+   ========================================= */
+.login-box button {
+    width: 100%;               /* Que ocupe todo el ancho igual que los cuadros de texto */
+    padding: 12px;             /* Lo hace más "gordito" y fácil de clickear */
+    background-color: #003b5c; /* El Azul Institucional que usaste de fondo */
+    color: white;              /* Texto en color blanco */
+    border: none;              /* Le quita el borde gris feo que trae por defecto */
+    border-radius: 5px;        /* Bordes redondeados para que haga juego con las cajas */
+    font-size: 16px;           /* Letra a buen tamaño */
+    font-weight: bold;         /* Letra remarcada (negritas) */
+    cursor: pointer;           /* Hace que el mouse se vuelva una "manita" al pasar por encima */
+    margin-top: 10px;          /* Un empujoncito hacia abajo para separarlo de los inputs */
+    transition: background-color 0.3s ease; /* Hace que el cambio de color al pasar el mouse sea suave */
+}
+
+/* EFECTO AL PASAR EL MOUSE POR ENCIMA (Hover) */
+.login-box button:hover {
+    background-color: #002236; /* Un azul más oscuro para que se note que lo estás tocando */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2); /* Le agrega una pequeña sombra 3D */
+}
+
+/* Estilo para que el botón de Registrarse no compita visualmente con el de Entrar */
+.login-box button.btn-registro {
+    background-color: transparent;
+    color: #003b5c;
+    border: 2px solid #003b5c;
+    margin-top: 15px;
+}
+
+.login-box button.btn-registro:hover {
+    background-color: #e6f0f5;
+    box-shadow: none;
+}

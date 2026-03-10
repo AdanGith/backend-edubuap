@@ -1,0 +1,11 @@
+# Ignorar Entornos Virtuales
+edu_env/
+venv/
+env/
+
+# Ignorar archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Ignorar variables de entorno o contraseñas
+.env
