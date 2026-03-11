@@ -38,12 +38,13 @@ body {
 .login-box {
     width: 100%;
     max-width: 400px;
-    text-align: left;
+    text-align: center
+    ;
 }
 
 .logoedu {
-    height: 150px;
-    width: 150px;
+    height: 1000px;
+    width: 1000px;
     display: block;
     margin: 0 auto 40px auto; 
 
@@ -112,4 +113,9 @@ h2 { margin-bottom: 25px; font-weight: normal; font-size: 18px; color: #333; }
 .login-box button.btn-registro:hover {
     background-color: #e6f0f5;
     box-shadow: none;
+}
+
+body.modoreverso {
+    flex-direction: row-reverse;
+
 }

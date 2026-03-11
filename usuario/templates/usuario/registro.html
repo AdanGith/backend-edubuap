@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro - EDUBUAP</title>
+    <link rel="stylesheet" href="{% static 'usuario/css/login.css' %}">
+</head>
+<body class="modoreverso"> 
+    
+    <div class="left-side">
+        <div class="login-box">
+            <img src="{% static 'usuario/img/logoedubua.png' %}" class="logoedu" alt="Logo EDUBUAP">
+            
+            <h1 style="margin-bottom: 30px;">¡Regístrate en EDU - BUAP!</h1>
+
+            <a href="{% url 'registro_profesor' %}">
+                <button type="button" class="btn-registro">Soy Profesor</button>
+            </a>
+            
+            <a href="{% url 'registro_alumno' %}">
+                <button type="button" class="btn-registro">Soy Estudiante</button>
+            </a>
+
+            <div style="text-align: center; margin-top: 25px;">
+                <a href="{% url 'login' %}" style="color: #003b5c; text-decoration: none; font-weight: bold;">
+                    Volver a iniciar Sesión
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="right-side">
+        <img src="{% static 'usuario/img/pruebaa.jpeg' %}" class="mi-imagen-flotante" alt="Imagen Registro">
+    </div>
+
+</body>
+</html>
